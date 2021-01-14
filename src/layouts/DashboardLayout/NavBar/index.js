@@ -14,6 +14,8 @@ import {
 import {
   Settings as SettingsIcon,
   User as UserIcon,
+  Search as SearchIcon,
+  List as ListIcon,
   Users as UsersIcon
 } from 'react-feather';
 import NavItem from './NavItem';
@@ -29,17 +31,22 @@ const items = [
   {
     href: '/app/account',
     icon: UserIcon,
-    title: 'Account'
+    title: 'Mi cuenta'
   },
   {
     href: '/app/settings',
     icon: SettingsIcon,
-    title: 'Settings'
+    title: 'Configuracion '
   },
   {
     href: '/app/customers',
-    icon: UsersIcon,
-    title: 'Customers'
+    icon: ListIcon,
+    title: 'Lista'
+  },
+  {
+    href: '/app/search',
+    icon: SearchIcon,
+    title: 'Buscar'
   }
 ];
 

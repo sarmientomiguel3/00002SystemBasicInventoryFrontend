@@ -10,6 +10,7 @@ import DashboardLayout from 'src/layouts/DashboardLayout';
 import MainLayout from 'src/layouts/MainLayout';
 import AccountView from 'src/views/account/AccountView';
 import CustomerListView from 'src/views/customer/CustomerListView';
+import SearchListView from 'src/views/search/SearchListView';
 //import DashboardView from 'src/views/reports/DashboardView';
 import LoginView from 'src/views/auth/LoginView';
 import NotFoundView from 'src/views/errors/NotFoundView';
@@ -34,9 +35,10 @@ const App = () => {
             <Route path="*" element={<Navigate to="/404" />} />
           </Route>
           <Route path="app" element={getToken() ? <DashboardLayout /> : <Navigate to="/login" /> }>
-            <Route path="account" element={<AccountView /> && <Navigate to="/app/account" />} />
+            <Route path="account" element={<AccountView />} />
             <Route path="customers" element={<CustomerListView />} />
             <Route path="settings" element={<SettingsView />} />
+            <Route path="search" element={<SearchListView />} />
             <Route path="*" element={<Navigate to="/404" />} />
           </Route>
           

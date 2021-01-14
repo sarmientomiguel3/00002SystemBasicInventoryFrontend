@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import moment from 'moment';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import {
   Dialog,
@@ -25,12 +24,10 @@ import {
   makeStyles,
   IconButton
 } from '@material-ui/core';
-import getInitials from 'src/utils/getInitials';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import BuildIcon from '@material-ui/icons/Build';
 import DeleteForeverOutlinedIcon from '@material-ui/icons/DeleteForeverOutlined';
 import Axios from 'axios';
-import { useTableSearch } from './useTableSearch';
 
 const useStyles = makeStyles((theme) => ({
   root: {},
@@ -52,8 +49,6 @@ const Results = ({ className, customers, ...rest }) => {
 
   const [element, setElement] = useState([]);
 
-  const [searchVal, setSearchVal] = useState(null);
-  
   const [pageinit, setPageinit] = useState(0);
 
   const handleClickOpen = () => {
@@ -163,7 +158,7 @@ const Results = ({ className, customers, ...rest }) => {
       });
     setOpendeleted(false);
   };
-  
+
   return (
     <div>
       <Card
@@ -291,7 +286,6 @@ const Results = ({ className, customers, ...rest }) => {
           rowsPerPage={limit}
           rowsPerPageOptions={[5, 10, 25]}
         />
-
       </Card>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
         <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>

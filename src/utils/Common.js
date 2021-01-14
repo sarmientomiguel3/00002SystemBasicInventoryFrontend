@@ -9,7 +9,6 @@ export const getUser = () => {
 // return the token from the session storage
 export const getToken = () => {
   const userStr = sessionStorage.getItem('user');
-  console.log("tmr"+userStr);
   return sessionStorage.getItem('token') || null;
 }
  
@@ -21,8 +20,6 @@ export const removeUserSession = () => {
  
 // set the token and user from the session storage
 export const setUserSession = (token, user) => {
-  console.log("usuariooooooooooooooooooooooooooooooooo"+token);
-  console.log(user);
   sessionStorage.setItem('token', token);
   sessionStorage.setItem('user', JSON.stringify(user));
 }

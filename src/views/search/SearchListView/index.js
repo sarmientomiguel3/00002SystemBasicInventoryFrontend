@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const CustomerListView = () => {
+const SearchListView = () => {
   const classes = useStyles();
 
   const [customers, setCustomers] = useState([]);
@@ -49,10 +49,9 @@ const CustomerListView = () => {
   return (
     <Page
       className={classes.root}
-      title="Lista"
+      title="Busqueda"
     >
       <Container maxWidth={false}>
-        <Toolbar customers={customers}/>
         <Box mt={3}>
           <Results customers={customers} />
         </Box>
@@ -61,4 +60,4 @@ const CustomerListView = () => {
   );
 };
 
-export default CustomerListView;
+export default SearchListView;

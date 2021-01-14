@@ -77,8 +77,8 @@ const ProfileDetails = ({ className, ...rest }) => {
     >
       <Card>
         <CardHeader
-          subheader="The information can be edited"
-          title="Profile"
+          subheader="Su informacion puede ser editado"
+          title="Informacion del Usuario"
         />
         <Divider />
         <CardContent>
@@ -94,7 +94,7 @@ const ProfileDetails = ({ className, ...rest }) => {
               <TextField
                 fullWidth
                 helperText="Please specify the first name"
-                label="First name"
+                label="Nombres"
                 name="firstName"
                 onChange={handleChange}
                 required
@@ -109,7 +109,7 @@ const ProfileDetails = ({ className, ...rest }) => {
             >
               <TextField
                 fullWidth
-                label="Last name"
+                label="Apellidos"
                 name="lastName"
                 onChange={handleChange}
                 required
@@ -139,7 +139,7 @@ const ProfileDetails = ({ className, ...rest }) => {
             >
               <TextField
                 fullWidth
-                label="Phone Number"
+                label="Telefono"
                 name="phone"
                 onChange={handleChange}
                 required
@@ -154,7 +154,7 @@ const ProfileDetails = ({ className, ...rest }) => {
             >
               <TextField
                 fullWidth
-                label="Country"
+                label="Pais"
                 name="country"
                 onChange={handleChange}
                 required
@@ -169,7 +169,7 @@ const ProfileDetails = ({ className, ...rest }) => {
             >
               <TextField
                 fullWidth
-                label="Select State"
+                label="Ciudad"
                 name="state"
                 onChange={handleChange}
                 required

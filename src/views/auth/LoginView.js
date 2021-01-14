@@ -102,7 +102,7 @@ const LoginView = (props) => {
                     variant="h2"
                     align="center"
                   >
-                    Sign in
+                    Iniciar Sesión
                   </Typography>
                   <Typography
                     color="textSecondary"
@@ -110,14 +110,14 @@ const LoginView = (props) => {
                     variant="body2"
                     align="center"
                   >
-                    Sign in on the internal platform
+                    Iniciar sesión en la plataforma interna
                   </Typography>
                 </Box>
                 <TextField
                   error={Boolean(touched.email && errors.email)}
                   fullWidth
                   helperText={touched.email && errors.email}
-                  label="Email Address"
+                  label="Correo Electronico"
                   margin="normal"
                   name="email"
                   onBlur={handleBlur}
@@ -129,7 +129,7 @@ const LoginView = (props) => {
                   error={Boolean(touched.password && errors.password)}
                   fullWidth
                   helperText={touched.password && errors.password}
-                  label="Password"
+                  label="Contraseña"
                   margin="normal"
                   name="password"
                   onBlur={handleBlur}
@@ -147,7 +147,7 @@ const LoginView = (props) => {
                     value={loading ? 'Loading...' : 'Login'}
                     onClick={handleLogin} disabled={loading}
                   >
-                    Sign in now
+                    Acceder
                   </Button>
                   {error && <><small style={{ color: 'red'}}>{error}</small></>}<br />
                 </Box>
